@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".ui.MainActivity">
+
+    <data>
+        <variable
+            name="loginviewmodel"
+            type="com.example.shoppingapp.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_shopping_cart_24"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:tint="@color/white"
+            android:id="@+id/shoppingkartlogo"/>
+
+        <TextView
+            android:id="@+id/shoppingkartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/shoppingkartlogo"
+            android:text="Shopping Kart"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/adlam_display"/>
+
+        <TextView
+            android:id="@+id/taglinetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shoppingkartTitle"
+            android:layout_toRightOf="@id/shoppingkartlogo"
+            android:textColor="@color/white"
+            android:fontFamily="@font/caveat_brush"
+            android:text="Now every day is a shopping day"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/amiko_bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:id="@+id/logintext"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/amiko"
+                android:id="@+id/usernametext"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:layout_marginLeft="15dp"
+                android:text="@={loginviewmodel.username}"
+                android:background="@drawable/roundecorner"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:padding="10dp"
+                android:fontFamily="@font/amiko"
+                android:textSize="13dp"
+                android:id="@+id/edtUsername"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/amiko"
+                android:id="@+id/passwordtext"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:text="@={loginviewmodel.password}"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundecorner"
+                android:padding="10dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/amiko"
+                android:id="@+id/edtPassword"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:fontFamily="@font/amiko_bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#004a8e"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/btnlogin"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#65000000"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/view1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a account here"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amiko"
+                android:textColor="#004a8e"
+                android:id="@+id/txtCreateAccount"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

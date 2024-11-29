@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adlam_display</item>
+        <item>@font/albert_sans</item>
+        <item>@font/amiko</item>
+        <item>@font/amiko_bold</item>
+        <item>@font/amiko_semibold</item>
+        <item>@font/anek_bangla_medium</item>
+        <item>@font/athiti_semibold</item>
+        <item>@font/averia_libre_italic</item>
+        <item>@font/bricolage_grotesque_extrabold</item>
+        <item>@font/bungee_inline</item>
+        <item>@font/caveat_brush</item>
+        <item>@font/courier_prime_bold_italic</item>
+    </array>
+</resources>

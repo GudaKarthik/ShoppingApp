@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".ui.AllProductsActivity">
+
+    <data>
+        <variable
+            name="productsviewmodel"
+            type="com.example.shoppingapp.viewmodel.ProductsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#65000000"
+        android:id="@+id/dashbar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            android:id="@+id/imgBack"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:tint="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Products"
+            android:layout_toRightOf="@id/imgBack"
+            android:layout_marginTop="13dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amiko_bold"
+            android:textColor="@color/white"
+            android:id="@+id/txtCategory"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#27000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/categoryRecycleView"/>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"/>
+
+        <ProgressBar
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="#CE3737"
+            android:background="@drawable/progress_bg"
+            android:padding="4dp"
+            android:id="@+id/progressbar"/>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>
