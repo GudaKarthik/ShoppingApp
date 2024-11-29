@@ -61,7 +61,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Biggest Sale Lowest Prices on fashion"
+            android:text="Biggest Sale Lowest Prices on kitchen"
             android:layout_below="@id/dashbar"
             android:textColor="#9C27B0"
             android:layout_marginTop="10dp"
